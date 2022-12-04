@@ -5,7 +5,7 @@
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#useage)
-  * [Tutorial](#tutorial)
+  * [Walkthrough](#walkthrough)
   * [License](#license)
   * [Tests](#tests)
   * [Questions](#questions)
@@ -21,8 +21,8 @@
   ## [Useage](#table-of-contents)
   Run the command 'node index.js' through the terminal. The user will then go through a series of prompts which will capture the user's input. Once completed a new index.html file will be generated.
   
-  ## [Tutorial](#table-of-contents)
-  Tutorial video:
+  ## [Walkthrough](#table-of-contents)
+  Walkthrough video: https://watch.screencastify.com/v/J082pKYvkkiSoKXj75YY
 
   ## [License](#table-of-contents)
   This application has the following license:
