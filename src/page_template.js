@@ -115,7 +115,7 @@ module.exports = (team) => {
     <div class="container">
         <div class="row">
             <div class="team-cards col-12 d-flex justify-content-center">
-                ${generatePage(team)}
+                ${pageTemplate(team)}
             </div>
         </div>
     </div>
