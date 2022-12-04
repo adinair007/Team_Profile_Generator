@@ -118,30 +118,30 @@ const questions = async () => {
 
     newMemberData.push(addIntern);
   }
-
-  async function finalQues() {
-    await questions();
-
-    const addQues = await inquirer.prompt([
-      {
-        type: 'list',
-        name: 'addMember',
-        message: 'Do you want to add another member to this team?',
-        choices: ['Yes. Add new member', 'No. Team is complete'],
-      },
-    ]);
-    if (addQues.addMember === 'Yes. Add new member') {
-      return finalQues();
-
-    } else {
-      return teamComplete();
-    };
-  };
-  finalQues();
-
-  function teamComplete () {
-    console.log("New Team: ", newMemberData);
-    fs.writeFileSync('./dist/index.html', pageTemplate(newMemberData), "utf-8")
-  }
    
 };
+
+async function finalQues() {
+  await questions();
+
+  const addQues = await inquirer.prompt([
+    {
+      type: 'list',
+      name: 'addMember',
+      message: 'Do you want to add another member to this team?',
+      choices: ['Yes. Add new member', 'No. Team is complete'],
+    },
+  ]);
+  if (addQues.addMember === 'Yes. Add new member') {
+    return finalQues();
+
+  } else {
+    return teamComplete();
+  };
+};
+finalQues();
+
+function teamComplete () {
+  console.log("New Team: ", newMemberData);
+  fs.writeFileSync('./dist/index.html', pageTemplate(newMemberData), "utf-8")
+}
